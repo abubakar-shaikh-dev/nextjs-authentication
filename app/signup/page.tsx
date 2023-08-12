@@ -23,34 +23,36 @@ export default function LoginPage() {
     resolver: yupResolver(schema()),
   });
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   function onSubmit(data: any) {
-    setLoading(true)
+    setLoading(true);
     const response = RegisterUser(data);
-    toast.promise(
-      response,
-      {
-        loading: "Please wait...",
-        success: (data:any) => data.msg,
-        error: (err) => err.msg,
-      },
-      {
-        success: {
-          duration: 2000,
+    toast
+      .promise(
+        response,
+        {
+          loading: "Please wait...",
+          success: (data: any) => data.msg,
+          error: (err) => err.msg,
         },
-        error: {
-          duration: 1000,
-        },
-      }
-    ).then(()=>{
-      router.push("/login");  
-    }).catch(()=>setLoading(false));
+        {
+          success: {
+            duration: 2000,
+          },
+          error: {
+            duration: 1000,
+          },
+        }
+      )
+      .then(() => {
+        router.push("/login");
+      })
+      .catch(() => setLoading(false));
   }
 
   return (
     <>
-
       <section className="h-screen w-full flex justify-center items-center">
         <div className="w-full xl:w-1/2 p-8">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -132,16 +134,18 @@ export default function LoginPage() {
               )}
             </div>
             <div className="flex w-full mt-8">
-
               <button
-                className={`${loading? "bg-gray-600 hover:bg-gray-600 cursor-not-allowed" : "bg-gray-800 hover:bg-gray-900"} flex justify-center items-center gap-2 w-full  text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10`}
+                className={`${
+                  loading
+                    ? "bg-gray-600 hover:bg-gray-600 cursor-not-allowed"
+                    : "bg-gray-800 hover:bg-gray-900"
+                } flex justify-center items-center gap-2 w-full  text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10`}
                 type="submit"
                 disabled={loading}
               >
-                {loading&&<ImSpinner8 className="animate-spin" />}
-                <span>{loading?'Processing....':'Signup'}</span>
+                {loading && <ImSpinner8 className="animate-spin" />}
+                <span>{loading ? "Processing...." : "Signup"}</span>
               </button>
-
             </div>
           </form>
         </div>

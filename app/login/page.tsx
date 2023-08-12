@@ -1,12 +1,20 @@
 "use client";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import { ImSpinner8 } from "react-icons/im";
+
+//Api
+import { LoginUser } from "./api";
 
 //Schema
 import { schema } from "./schema";
 
 export default function LoginPage() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -15,8 +23,32 @@ export default function LoginPage() {
     resolver: yupResolver(schema()),
   });
 
+  const [loading, setLoading] = useState(false);
+
   function onSubmit(data: any) {
-    console.log(data);
+    setLoading(true);
+    const response = LoginUser(data);
+    toast
+      .promise(
+        response,
+        {
+          loading: "Please wait...",
+          success: (data: any) => data.msg,
+          error: (err) => err.msg,
+        },
+        {
+          success: {
+            duration: 2000,
+          },
+          error: {
+            duration: 1000,
+          },
+        }
+      )
+      .then(() => {
+        router.push("/profile");
+      })
+      .catch(() => setLoading(false));
   }
 
   return (
@@ -80,10 +112,16 @@ export default function LoginPage() {
             </div>
             <div className="flex w-full mt-8">
               <button
-                className="w-full bg-gray-800 hover:bg-grey-900 text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10"
+                className={`${
+                  loading
+                    ? "bg-gray-600 hover:bg-gray-600 cursor-not-allowed"
+                    : "bg-gray-800 hover:bg-gray-900"
+                } flex justify-center items-center gap-2 w-full  text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10`}
                 type="submit"
+                disabled={loading}
               >
-                Login
+                {loading && <ImSpinner8 className="animate-spin" />}
+                <span>{loading ? "Processing...." : "Login"}</span>
               </button>
             </div>
           </form>
