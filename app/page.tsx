@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
 
-  async function handleLogout() {
+  const handleLogout = async () => {
     try {
-      await axios.get("/api/users/logout");
-      toast.success("Logout successful");
+      const response = await axios.get("/api/users/logout");
+      toast.success(response.data.msg);
       router.push("/login");
     } catch (error: any) {
       console.log(error.message);
@@ -32,12 +32,12 @@ export default function Home() {
           </div>
 
           <div>
-            <span
+            <button
               onClick={handleLogout}
-              className=" text-white cursor-pointer py-2 px-4 bg-slate-700 hover:bg-slate-900 rounded-md hover:shadow-xl transition-all duration-200"
+              className=" text-white cursor-pointer py-1.5 px-4 bg-slate-700 hover:bg-slate-900 rounded-md hover:shadow-xl transition-all duration-200"
             >
               Logout
-            </span>
+            </button>
           </div>
         </div>
       </section>
