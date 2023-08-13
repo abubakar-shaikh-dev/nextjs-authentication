@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("/api/users/logout");
+      const response = await axios.post("/api/users/logout");
       toast.success(response.data.msg);
       router.push("/login");
     } catch (error: any) {
