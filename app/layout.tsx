@@ -6,8 +6,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next Auth',
-  description: 'Next Auth with Email',
+  title: 'Nextjs Authentication',
+  description: 'Nextjs Authentication (NextAuth Package Not Used)',
 }
 
 export default function RootLayout({
