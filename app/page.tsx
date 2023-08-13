@@ -1,6 +1,19 @@
+"use client";
 import Link from "next/link";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+ 
+  const router = useRouter();
+
+  async function handleLogout() {
+    const response = await axios.get("/api/users/logout");
+    toast.success(response.data.msg);
+    router.push("/login");
+  }
+
   return (
     <>
       <section className="h-screen w-full flex justify-center items-center">
@@ -16,7 +29,8 @@ export default function Home() {
 
           <div>
             <Link
-              href="/profile"
+              href="#"
+              onClick={handleLogout}
               className=" text-white py-2 px-4 bg-slate-700 hover:bg-slate-900 rounded-md hover:shadow-xl transition-all duration-200"
             >
               Logout
