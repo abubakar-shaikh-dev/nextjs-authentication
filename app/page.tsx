@@ -5,13 +5,17 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
- 
   const router = useRouter();
 
   async function handleLogout() {
-    const response = await axios.get("/api/users/logout");
-    toast.success(response.data.msg);
-    router.push("/login");
+    try {
+      await axios.get("/api/users/logout");
+      toast.success("Logout successful");
+      router.push("/login");
+    } catch (error: any) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
   }
 
   return (
@@ -28,13 +32,12 @@ export default function Home() {
           </div>
 
           <div>
-            <Link
-              href="#"
+            <span
               onClick={handleLogout}
-              className=" text-white py-2 px-4 bg-slate-700 hover:bg-slate-900 rounded-md hover:shadow-xl transition-all duration-200"
+              className=" text-white cursor-pointer py-2 px-4 bg-slate-700 hover:bg-slate-900 rounded-md hover:shadow-xl transition-all duration-200"
             >
               Logout
-            </Link>
+            </span>
           </div>
         </div>
       </section>
