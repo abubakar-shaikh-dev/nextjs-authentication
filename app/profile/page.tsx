@@ -1,5 +1,5 @@
 import Link from "next/link"
-import ProfileData from "./profileData"
+import ProfileData from "./ProfileData"
 
 export default function ProfilePage() {
 
