@@ -70,4 +70,4 @@ Check out the live demo of the project: [Next.js Authentication Demo](https://ne
 
 ## Contact
 
-For any questions or issues, feel free to reach out to us at shaikhabubakar2380@gmail.com. We would love to hear from you!
+For any questions or issues, feel free to reach out to us at shaikhabubakar2380@gmail.com. I would love to hear from you!
