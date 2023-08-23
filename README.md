@@ -13,7 +13,6 @@ A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a N
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [Demo](#demo)
-- [Repository Link](#repository-link)
 - [Contact](#contact)
   
 ## Project Details
@@ -29,28 +28,23 @@ This repository contains a Next.js web application with TypeScript that demonstr
 
 - Next.js
 - React.js
-- JSON Web Tokens (JWT)
-- MongoDB
-- HTML
-- CSS
-- JavaScript
 - Tailwind CSS
 - TypeScript
+- JSON Web Tokens (JWT)
+- MongoDB
 
 ## Environment Variables
 
 Create a `.env` file in the root directory with the following environment variables:
 
 ```dotenv
-# .env
-
 MONGODB_URI=<Your MongoDB connection URI>
 SECRET=<Your JWT secret key>
 ```
 
 Replace `<Your MongoDB connection URI>` with the actual connection URI of your MongoDB database, and `<Your JWT secret key>` with a secure secret key for JWT token generation and verification.
 
-*Note: The `.env.local` file should not be committed to version control as it may contain sensitive information.*
+*Note: The `.env` file should not be committed to version control as it may contain sensitive information.*
 
 ## Installation
 
@@ -73,10 +67,6 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to see the 
 ## Demo
 
 Check out the live demo of the project: [Next.js Authentication Demo](https://nextjs-authentication-demo.vercel.app/)
-
-## Repository Link
-
-For more details, you can visit the repository on [GitHub](https://github.com/abubakar-shaikh-dev/nextjs-authentication).
 
 ## Contact
 
