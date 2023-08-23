@@ -1,7 +1,6 @@
 # Next.js Authentication
 
-!Next.js Authentication](https://github.com/abubakar-shaikh-dev/nextjs-authentication/assets/64248752/b5d31109-e87a-42a1-99bc-138baa4f90cc)
-
+![Next js Authentication](https://github.com/abubakar-shaikh-dev/nextjs-authentication/assets/64248752/700fb7b2-ab9c-49e4-a4ec-9a3846de9be8)
 
 A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a Next.js web application with TypeScript.
 
