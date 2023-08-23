@@ -2,7 +2,7 @@
 
 ![Next js Authentication](https://github.com/abubakar-shaikh-dev/nextjs-authentication/assets/64248752/fed125a3-6ddf-4339-b84f-d08e62715eab)
 
-A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a Next.js web application with TypeScript.
+This repository contains a demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a Next.js web application with TypeScript.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a N
 - [Running the Application](#running-the-application)
 - [Demo](#demo)
 - [Contact](#contact)
-  
+
 ## Project Details
 
 - **Repository Name:** Next.js Authentication
@@ -22,7 +22,7 @@ A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a N
 
 ## Description
 
-This repository contains a Next.js web application with TypeScript that demonstrates authentication using JSON Web Tokens (JWT) and MongoDB. It emphasizes the importance of setting up environment variables for configuration.
+This Next.js web application with TypeScript demonstrates authentication using JSON Web Tokens (JWT) and MongoDB. It emphasizes the importance of configuring environment variables.
 
 ## Technologies Used
 
@@ -42,13 +42,13 @@ MONGODB_URI=<Your MongoDB connection URI>
 SECRET=<Your JWT secret key>
 ```
 
-Replace `<Your MongoDB connection URI>` with the actual connection URI of your MongoDB database, and `<Your JWT secret key>` with a secure secret key for JWT token generation and verification.
+Replace `<Your MongoDB connection URI>` with your MongoDB database's connection URI and `<Your JWT secret key>` with a secure key for JWT token operations.
 
 *Note: The `.env` file should not be committed to version control as it may contain sensitive information.*
 
 ## Installation
 
-To set up the project locally, you can choose one of the following package managers:
+To set up the project locally, you can use one of the following package managers:
 
 - **Yarn:** `yarn install`
 - **npm:** `npm install`
@@ -56,7 +56,7 @@ To set up the project locally, you can choose one of the following package manag
 
 ## Running the Application
 
-After the installation, run the Next.js application using the command:
+After installation, run the Next.js application using this command:
 
 ```bash
 npm run dev
@@ -66,8 +66,8 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to see the 
 
 ## Demo
 
-Check out the live demo of the project: [Next.js Authentication Demo](https://nextjs-authentication-demo.vercel.app/)
+Explore the live demo of the project: [Next.js Authentication Demo](https://nextjs-authentication-demo.vercel.app/)
 
 ## Contact
 
-For any questions or issues, feel free to reach out to us at shaikhabubakar2380@gmail.com. I would love to hear from you!
+For inquiries or issues, feel free to contact us at shaikhabubakar2380@gmail.com. We'd love to hear from you!
