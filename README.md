@@ -1,6 +1,6 @@
 # Next.js 13 Authentication
 
-![Next js Authentication](https://github.com/abubakar-shaikh-dev/nextjs-authentication/assets/64248752/700fb7b2-ab9c-49e4-a4ec-9a3846de9be8)
+![Next js Authentication](https://github.com/abubakar-shaikh-dev/nextjs-authentication/assets/64248752/fed125a3-6ddf-4339-b84f-d08e62715eab)
 
 A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a Next.js web application with TypeScript.
 
@@ -9,28 +9,48 @@ A demonstration of authentication using JSON Web Tokens (JWT) and MongoDB in a N
 - [Project Details](#project-details)
 - [Description](#description)
 - [Technologies Used](#technologies-used)
+- [Environment Variables](#environment-variables)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [Demo](#demo)
 - [Repository Link](#repository-link)
-
+- [Contact](#contact)
+  
 ## Project Details
 
-- **Repository Name:** nextjs-authentication
+- **Repository Name:** Next.js Authentication
 - **Bootstraped with:** Next.js version 13
 
 ## Description
 
-This repository contains a Next.js web application with TypeScript that demonstrates authentication using JSON Web Tokens (JWT) and MongoDB. It emphasizes the importance of setting up environment variables for configuration, particularly `MONGODB_URI` for the MongoDB connection and `SECRET` for JWT token generation and verification. To obtain these environment variables, users are guided to create accounts on MongoDB Atlas, set up clusters, and generate a secure secret key.
+This repository contains a Next.js web application with TypeScript that demonstrates authentication using JSON Web Tokens (JWT) and MongoDB. It emphasizes the importance of setting up environment variables for configuration.
 
 ## Technologies Used
 
 - Next.js
 - React.js
+- JSON Web Tokens (JWT)
+- MongoDB
+- HTML
+- CSS
+- JavaScript
 - Tailwind CSS
 - TypeScript
-- JSON Web Tokens (JWT)
-- MongoDB 
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following environment variables:
+
+```dotenv
+# .env
+
+MONGODB_URI=<Your MongoDB connection URI>
+SECRET=<Your JWT secret key>
+```
+
+Replace `<Your MongoDB connection URI>` with the actual connection URI of your MongoDB database, and `<Your JWT secret key>` with a secure secret key for JWT token generation and verification.
+
+*Note: The `.env.local` file should not be committed to version control as it may contain sensitive information.*
 
 ## Installation
 
@@ -58,6 +78,6 @@ Check out the live demo of the project: [Next.js Authentication Demo](https://ne
 
 For more details, you can visit the repository on [GitHub](https://github.com/abubakar-shaikh-dev/nextjs-authentication).
 
----
+## Contact
 
-*Note: This repository is not open for contributions.*
+For any questions or issues, feel free to reach out to us at shaikhabubakar2380@gmail.com. We would love to hear from you!
